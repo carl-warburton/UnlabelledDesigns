@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails UnlabelledDesigns: development" uuid="dbaa67e8-2a66-48c8-a6ef-6e18568e88a8">
+      <driver-ref>1c8f7f37-1109-4b7b-af57-22e692885bc9</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:UnlabelledDesigns_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails UnlabelledDesigns: test" uuid="3494c58d-a659-4654-b50e-07870cd08cb1">
+      <driver-ref>1c8f7f37-1109-4b7b-af57-22e692885bc9</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:UnlabelledDesigns_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails UnlabelledDesigns: production" uuid="9a6adcf5-b47f-4744-8d69-054d1cd30c62">
+      <driver-ref>1c8f7f37-1109-4b7b-af57-22e692885bc9</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:UnlabelledDesigns_production</jdbc-url>
+    </data-source>
+  </component>
+</project>

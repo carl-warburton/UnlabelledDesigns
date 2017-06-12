@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails UnlabelledDesigns: development" uuid="dbaa67e8-2a66-48c8-a6ef-6e18568e88a8">
+      <database-info product="PostgreSQL" version="9.6.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4.1212">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <introspection-schemas>UnlabelledDesigns_development:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails UnlabelledDesigns: test" uuid="3494c58d-a659-4654-b50e-07870cd08cb1">
+      <database-info product="PostgreSQL" version="9.6.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4.1212">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <introspection-schemas>UnlabelledDesigns_test:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails UnlabelledDesigns: production" uuid="9a6adcf5-b47f-4744-8d69-054d1cd30c62">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+    </data-source>
+  </component>
+</project>
