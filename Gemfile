@@ -35,6 +35,10 @@ gem 'jbuilder', '~> 2.5'
 # gem Devise for user management
 gem 'devise'
 
+# Bootstrap gem for styling
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
