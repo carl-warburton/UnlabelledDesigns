@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :products
+  resources :profiles
   get 'pages/home'
 
   get 'pages/about'

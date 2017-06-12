@@ -1,6 +1,6 @@
-class CreateProducts < ActiveRecord::Migration[5.0]
+class CreateProfiles < ActiveRecord::Migration[5.0]
   def change
-    create_table :products do |t|
+    create_table :profiles do |t|
       t.string :title
       t.text :description
       t.text :front_image
