@@ -32,26 +32,31 @@ end
 puts "5 skills created"
 
 8.times do |product_item|
-  Product.create!(
+  Size.find_each do |size|
+  size.product.create!(
       title: "Product title: #{product_item}",
       description: "Illustrated Series",
       front_image: "http://placehold.it/200x200",
       back_image: "http://placehold.it/250x100"
   )
+  end
 end
 
 puts "8 product items created"
 
 
-1.times do |product_item|
-  Product.create!(
-      title: "Product title: #{product_item}",
-      description: "Photography Series",
-      front_image: "http://placehold.it/200x200",
-      back_image: "http://placehold.it/250x100"
-  )
+8.times do |product_item|
+  Size.find_each do |size|
+    size.product.create!(
+        title: "Product title: #{product_item}",
+        description: "Photography Series",
+        front_image: "http://placehold.it/200x200",
+        back_image: "http://placehold.it/250x100"
+    )
+  end
 end
-puts "1 product item created"
+
+puts "8 product items created"
 
 1.times do
   Product.find_each do |product|
