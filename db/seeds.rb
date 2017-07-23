@@ -52,3 +52,54 @@ puts "8 product items created"
   )
 end
 puts "1 product item created"
+
+1.times do
+  Product.find_each do |product|
+    product.sizes.create!(
+      name:"Small"
+  )
+  end
+end
+
+puts "1 size  created"
+
+1.times do
+  Product.find_each do |product|
+    product.sizes.create!(
+        name:"Medium"
+    )
+  end
+end
+
+
+puts "1 size created"
+
+1.times do
+  Product.find_each do |product|
+    product.sizes.create!(
+        name:"Large"
+    )
+  end
+end
+
+puts "1 size created"
+
+1.times do
+  Product.find_each do |product|
+    product.sizes.create!(
+        name:"X-Large"
+    )
+  end
+end
+
+puts "1 size created"
+
+1.times do
+  Product.find_each do |product|
+    product.sizes.create!(
+        name:"XX-Large"
+    )
+  end
+end
+
+puts "1 size created"
