@@ -1,3 +1,11 @@
+3.times do |topic|
+  Topic.create!(
+           title: "Topic #{topic}"
+  )
+end
+
+puts "3 copies created"
+
 10.times do |blog|
   Blog.create!(
       title: "My Blog Post #{blog}",
@@ -8,6 +16,7 @@
              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
              Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
              nulla pariatur?",
+      topic_id: Topic.last.id
   )
 end
 
@@ -31,13 +40,15 @@ puts "5 skills created"
   )
 end
 
-puts "9 product items created"
+puts "8 product items created"
+
 
 1.times do |product_item|
   Product.create!(
       title: "Product title: #{product_item}",
-      description: "Embroided Series",
+      description: "Photography Series",
       front_image: "http://placehold.it/200x200",
       back_image: "http://placehold.it/250x100"
   )
 end
+puts "1 product item created"

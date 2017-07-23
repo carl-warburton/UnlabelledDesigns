@@ -4,6 +4,10 @@ class ProductsController < ApplicationController
     @product_items = Product.all
   end
 
+  def illustrated
+    @illustrated_product_items = Product.illustrated
+  end
+
   def new
     @product_item = Product.new
   end
