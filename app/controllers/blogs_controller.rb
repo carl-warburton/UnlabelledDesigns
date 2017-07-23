@@ -68,7 +68,6 @@ class BlogsController < ApplicationController
       @blog.published?
       @blog.draft!
     end
-
     redirect_to blogs_url, notice: 'Post Status has been updated'
   end
 
