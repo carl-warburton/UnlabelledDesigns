@@ -32,79 +32,110 @@ end
 puts "5 skills created"
 
 8.times do |product_item|
-  Size.find_each do |size|
-  size.product.create!(
+  Product.create!(
       title: "Product title: #{product_item}",
       description: "Illustrated Series",
       front_image: "http://placehold.it/200x200",
       back_image: "http://placehold.it/250x100"
   )
-  end
 end
 
 puts "8 product items created"
 
 
 8.times do |product_item|
-  Size.find_each do |size|
-    size.product.create!(
-        title: "Product title: #{product_item}",
-        description: "Photography Series",
-        front_image: "http://placehold.it/200x200",
-        back_image: "http://placehold.it/250x100"
-    )
-  end
-end
-
-puts "8 product items created"
-
-1.times do
-  Product.find_each do |product|
-    product.sizes.create!(
-      name:"Small"
+  Product.create!(
+      title: "Product title: #{product_item}",
+      description: "Photography Series",
+      front_image: "http://placehold.it/200x200",
+      back_image: "http://placehold.it/250x100"
   )
-  end
 end
-
-puts "1 size  created"
+puts "8 product item created"
 
 1.times do
-  Product.find_each do |product|
-    product.sizes.create!(
-        name:"Medium"
-    )
-  end
+  Size.create!(
+      name:"Small",
+  )
 end
 
-
-puts "1 size created"
 
 1.times do
-  Product.find_each do |product|
-    product.sizes.create!(
-        name:"Large"
-    )
-  end
+  Size.create!(
+      name:"Medium",
+  )
 end
-
-puts "1 size created"
 
 1.times do
-  Product.find_each do |product|
-    product.sizes.create!(
-        name:"X-Large"
-    )
-  end
+  Size.create!(
+      name:"Large",
+  )
 end
-
-puts "1 size created"
+1.times do
+  Size.create!(
+      name:"X-Large",
+  )
+end
 
 1.times do
-  Product.find_each do |product|
-    product.sizes.create!(
-        name:"XX-Large"
-    )
-  end
+  Size.create!(
+      name:"XX-Large",
+  )
 end
 
-puts "1 size created"
+puts "5 sizes created"
+
+
+Product.find_each do |product_item|
+    product_item.sizes.create!(
+         name:"Small"
+    )
+end
+
+Product.find_each do |product_item|
+  product_item.sizes.create!(
+      name:"Medium"
+  )
+end
+
+Product.find_each do |product_item|
+  product_item.sizes.create!(
+      name:"Large"
+  )
+end
+
+Product.find_each do |product_item|
+  product_item.sizes.create!(
+      name:"X-Large"
+  )
+end
+
+Product.find_each do |product_item|
+  product_item.sizes.create!(
+      name:"XX-Large"
+  )
+end
+
+# 8.times do |product_item|
+# Size.find_each do |size|
+#   size.products.create!(
+#         title: "Product title: #{product_item}",
+#         description: "Illustrated Series",
+#         front_image: "http://placehold.it/200x200",
+#         back_image: "http://placehold.it/250x100"
+#   )
+#   end
+# end
+#
+# 8.times do |product_item|
+#   Size.find_each do |size|
+#     size.products.create!(
+#         title: "Product title: #{product_item}",
+#         description: "Photography Series",
+#         front_image: "http://placehold.it/200x200",
+#         back_image: "http://placehold.it/250x100"
+#     )
+#   end
+# end
+
+
