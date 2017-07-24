@@ -56,6 +56,7 @@ puts "8 product item created"
 1.times do
   Size.create!(
       name:"Small",
+      quantity: 10
   )
 end
 
@@ -63,23 +64,27 @@ end
 1.times do
   Size.create!(
       name:"Medium",
+      quantity: 10
   )
 end
 
 1.times do
   Size.create!(
       name:"Large",
+      quantity: 10
   )
 end
 1.times do
   Size.create!(
       name:"X-Large",
+      quantity: 10
   )
 end
 
 1.times do
   Size.create!(
       name:"XX-Large",
+      quantity: 10
   )
 end
 
@@ -88,31 +93,36 @@ puts "5 sizes created"
 
 Product.find_each do |product_item|
     product_item.sizes.create!(
-         name:"Small"
+         name:"Small",
+         quantity: 10
     )
 end
 
 Product.find_each do |product_item|
   product_item.sizes.create!(
-      name:"Medium"
+      name:"Medium",
+      quantity: 10
   )
 end
 
 Product.find_each do |product_item|
   product_item.sizes.create!(
-      name:"Large"
+      name:"Large",
+      quantity: 10
   )
 end
 
 Product.find_each do |product_item|
   product_item.sizes.create!(
-      name:"X-Large"
+      name:"X-Large",
+      quantity: 10
   )
 end
 
 Product.find_each do |product_item|
   product_item.sizes.create!(
-      name:"XX-Large"
+      name:"XX-Large",
+      quantity: 10
   )
 end
 

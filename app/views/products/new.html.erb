@@ -12,15 +12,20 @@
       <%= f.text_area :description %>
     </div>
 
-    <!--<div class="field">-->
-      <!--<#%= f.label :front_image %>-->
-      <!--<#%= f.image :front_image %>-->
-    <!--</div>-->
 
-    <!--<div class="field">-->
-      <!--<#%= f.label :back_image %>-->
-      <!--<#%= f.image :back_image %>-->
-    <!--</div>-->
+    <ul>
+      <%= f.fields_for :technologies do |size_form| %>
+      <li>
+        <%= size_form.label :name, 'Sizes' %>
+        <%= size_form.select :name, [['Small','small'],['Medium','medium'],['Large','large'],['X-Large','x-large'],['XX-Large','large']] %>
+      </li>
+          <li>
+            <%= size_form.label :quantity, 'Quantity' %>
+            <%= size_form.number_field :quantity%>
+          </li>
+      <% end %>
+    </ul>
+
 
     <div class="actions">
       <%= f.submit %>

@@ -10,10 +10,12 @@ class ProductsController < ApplicationController
 
   def new
     @product_item = Product.new
+    5.times {@product_item.sizes.build}
   end
 
   def create
-    @product_item = Product.new(params.require(:product).permit(:title, :description))
+    @product_item = Product.new(params.require(:product).permit(:title, :description, sizes_attributes: [:name]))
+    @sizes = [['Small','small'],['Medium','medium'],['Large','large'],['X-Large','x-large'],['XX-Large','xx-large']]
 
     respond_to do |format|
       if @product_item.save

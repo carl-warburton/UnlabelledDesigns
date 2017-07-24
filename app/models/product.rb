@@ -1,5 +1,8 @@
 class Product < ApplicationRecord
   has_and_belongs_to_many :sizes
+  accepts_nested_attributes_for :sizes,
+                                            reject_if: lambda { |attrs| attrs['name'].blank? }
+
   include Placeholder
   validates_presence_of :title, :description, :front_image, :back_image
 
