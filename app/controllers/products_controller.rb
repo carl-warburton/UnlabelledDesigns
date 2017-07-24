@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product_item = Product.new(params.require(:product).permit(:title, :description, sizes_attributes: [:name]))
+    @product_item = Product.new(product_params)
     @sizes = [['Small','small'],['Medium','medium'],['Large','large'],['X-Large','x-large'],['XX-Large','xx-large']]
 
     respond_to do |format|
@@ -34,7 +34,7 @@ class ProductsController < ApplicationController
     @product_item = Product.find(params[:id])
 
     respond_to do |format|
-      if @product_item.update(params.require(:product).permit(:title, :description))
+      if @product_item.update(product_params)
         format.html { redirect_to products_path, notice: 'The record successfully updated.' }
       else
         format.html { render :edit }
@@ -58,5 +58,19 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_url, notice: 'Record was removed.' }
     end
   end
+
+  ######################
+  private
+  ######################
+
+  def product_params
+    params.require(:product).permit(:title,
+                                    :description,
+                                    :front_image,
+                                    :back_image,
+                                    sizes_attributes: [:name, :quantity])
+
+  end
+
 
 end

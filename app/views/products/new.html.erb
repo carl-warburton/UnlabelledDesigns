@@ -14,15 +14,11 @@
 
 
     <ul>
-      <%= f.fields_for :technologies do |size_form| %>
+      <%= f.fields_for :sizes do |size_form| %>
       <li>
-        <%= size_form.label :name, 'Sizes' %>
-        <%= size_form.select :name, [['Small','small'],['Medium','medium'],['Large','large'],['X-Large','x-large'],['XX-Large','large']] %>
+        <%= size_form.select :name, ['Small','Medium','Large','X-Large','XX-Large',] %>
+        <%= size_form.number_field :quantity%>
       </li>
-          <li>
-            <%= size_form.label :quantity, 'Quantity' %>
-            <%= size_form.number_field :quantity%>
-          </li>
       <% end %>
     </ul>
 
