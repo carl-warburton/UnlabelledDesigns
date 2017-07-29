@@ -1,0 +1,28 @@
+
+
+<%= form_for(@product_item) do |f| %>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+
+
+    <ul>
+      <%= f.fields_for :sizes do |size_form| %>
+          <li>
+            <%= size_form.select :name, ['Small','Medium','Large','X-Large','XX-Large',] %>
+            <%= size_form.number_field :quantity%>
+          </li>
+      <% end %>
+    </ul>
+
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

@@ -15,8 +15,6 @@ class ProductsController < ApplicationController
 
   def create
     @product_item = Product.new(product_params)
-    @sizes = [['Small','small'],['Medium','medium'],['Large','large'],['X-Large','x-large'],['XX-Large','xx-large']]
-
     respond_to do |format|
       if @product_item.save
         format.html { redirect_to products_path, notice: 'Your product item is now live.' }

@@ -11,10 +11,16 @@ class Product < ApplicationRecord
   end
 
   after_initialize :set_defaults
+  after_create :set_sizes
+
 
 
   def set_defaults
     self.front_image ||= Placeholder.image_generater(height: '200', width: '200')
     self.back_image ||= Placeholder.image_generater(height: '100', width: '250')
+  end
+
+  def set_sizes
+    self.sizes = ['Small','Medium','Large','X-Large','XX-Large']
   end
 end
