@@ -1,0 +1,5 @@
+<p><%= link_to product_item.title, product_show_path(product_item) %></p>
+<p><%= product_item.description %></p>
+<p><%= image_tag product_item.front_image unless product_item.front_image.nil? %></p>
+<%= link_to "Edit", edit_product_path(product_item) %>
+<%= link_to 'Delete product Item', product_path(product_item), method: :delete, data: { confirm: 'Are you sure?' } %>
